@@ -52,21 +52,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="hero-content">
-                <p class="hero-kicker">Gestión de servicio técnico</p>
-                <h2 class="hero-title">Cada equipo.<br>Cada reparación.<br>Todo bajo control.</h2>
-                <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
+                <div class="hero-intro">
+                    <p class="hero-kicker">Gestión de servicio técnico</p>
+                    <h2 class="hero-title">Cada equipo.<br>Cada reparación.<br>Todo bajo control.</h2>
+                    <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
+                </div>
 
                 <div class="hero-illustration">
-                    <svg width="280" height="130" viewBox="0 0 280 130" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round">
-                        <rect x="40" y="15" width="150" height="90" rx="4"/>
-                        <rect x="50" y="25" width="130" height="68" rx="1"/>
-                        <path d="M25 118 L40 105 H190 L205 118 Z"/>
-                        <rect x="100" y="105" width="30" height="5"/>
-                        <circle cx="115" cy="59" r="16" fill="#334E7A" stroke="none"/>
-                        <path d="M108 59 l5 5 l9 -9" stroke="#CBD5E1" stroke-width="2"/>
-                        <rect x="215" y="38" width="38" height="78" rx="5"/>
-                        <path d="M228 108 h12"/>
-                        <path d="M228 76 l4 4 l8 -8" stroke="#CBD5E1" stroke-width="2"/>
+                    <svg viewBox="0 0 432 198" fill="none" stroke="#8CAAC5" stroke-width="1.8" stroke-linejoin="round">
+                        <path d="M59 152V39q0-7 7-7h220q7 0 7 7v113z"/>
+                        <path d="M73 47h206v87H73zM59 152l-24 20q0 6 8 6h278l-28-26zM145 152v9h64v-9"/>
+                        <circle cx="175" cy="96" r="28.5" fill="#233F60" stroke="none"/>
+                        <path d="m166 96 5 5 13-13" stroke="#BCD1E2" stroke-width="1"/>
+                        <rect x="307" y="65" width="62" height="118" rx="7" fill="#0B1D32"/>
+                        <path d="M327 73h21m-18 102h17m-24-51 5 5 9-10"/>
                     </svg>
                 </div>
 
@@ -111,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="••••••••">
                             <button type="button" class="toggle-pass" aria-label="Mostrar u ocultar contraseña"
                                     onclick="var p=document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password';">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18"/></svg>
                             </button>
                         </div>
                     </div>
@@ -126,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="login-info" id="ayuda-acceso" role="note">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Tu cuenta muestra las herramientas de tu rol. Si eres cliente, el taller te proporcionará tus datos de acceso al recibir tu equipo. ¿Olvidaste tu contraseña? Solicítala en el mostrador.</span>
+                    <span>Tu cuenta muestra las herramientas de tu rol. Si eres cliente, el taller te proporcionará tus datos de acceso al recibir tu equipo. <span class="password-help">¿Olvidaste tu contraseña? Solicítala en el mostrador.</span></span>
                 </div>
             </section>
 
