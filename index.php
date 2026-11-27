@@ -45,9 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main id="contenido-principal" class="login-wrapper">
         <section class="login-card" aria-labelledby="titulo-login">
             <header class="login-header">
-                <span class="pill-local">ATENCIÓN EXCLUSIVA EN MOSTRADOR LOCAL</span>
+                <div class="login-logo" aria-hidden="true">P</div>
                 <h1 id="titulo-login">Acceso a Proservis</h1>
                 <p>Sistema de Gestión de Servicio Técnico y Reparación</p>
+                <span class="pill-local">ATENCIÓN EXCLUSIVA EN MOSTRADOR LOCAL</span>
             </header>
 
             <div class="login-body-content">
@@ -61,21 +62,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <form method="POST" action="index.php">
                     <div class="form-group">
-                        <label for="correo">Correo electrónico *</label>
+                        <label for="correo">Correo electrónico <span aria-hidden="true">*</span></label>
                         <input type="email" id="correo" name="correo" required autocomplete="email"
                                placeholder="usuario@proservis.local" value="<?= e($_POST['correo'] ?? '') ?>">
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Contraseña *</label>
+                        <label for="password">Contraseña <span aria-hidden="true">*</span></label>
                         <input type="password" id="password" name="password" required autocomplete="current-password"
                                placeholder="••••••••">
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block">Ingresar al sistema</button>
                 </form>
+
+                <p class="login-help">¿Olvidó su contraseña? Acérquese al mostrador del taller.</p>
             </div>
         </section>
+
+        <p class="login-footer">© <?= date('Y') ?> Proservis · Servicio Técnico</p>
     </main>
 </body>
 </html>
