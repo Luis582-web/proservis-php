@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión · Proservis</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=<?= filemtime(__DIR__ . '/styles.css') ?>">
 </head>
 <body class="login-body">
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
 
             <div class="hero-illustration">
-                <svg viewBox="0 0 280 130" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round">
+                <svg width="280" height="130" viewBox="0 0 280 130" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round">
                     <rect x="40" y="15" width="150" height="90" rx="4"/>
                     <rect x="50" y="25" width="130" height="68" rx="1"/>
                     <path d="M25 118 L40 105 H190 L205 118 Z"/>
