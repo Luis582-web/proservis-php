@@ -46,7 +46,7 @@ unset($_SESSION['flash'], $_SESSION['flash_error']);
                     </div>
                 </div>
                 <button type="button" id="btn-menu-movil" class="btn-menu-movil"
-                        aria-expanded="false" aria-controls="nav-principal">
+                        aria-expanded="false" aria-controls="nav-principal pie-menu">
                     ☰ Menú
                 </button>
             </div>
@@ -72,7 +72,7 @@ unset($_SESSION['flash'], $_SESSION['flash_error']);
                 </ul>
             </nav>
 
-            <div class="sidebar-footer">
+            <div class="sidebar-footer" id="pie-menu">
                 <small>Modalidad: Solo mostrador local</small>
                 <a href="logout.php" class="btn btn-danger btn-block">Cerrar sesión (1.0)</a>
             </div>

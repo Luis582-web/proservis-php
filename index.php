@@ -43,9 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
     <div class="login-split">
-        <aside class="login-hero" aria-hidden="true">
+        <aside class="login-hero">
             <div class="hero-brand">
-                <span class="hero-brand-icon">
+                <span class="hero-brand-icon" aria-hidden="true">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                 </span>
                 ProServis
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
                 </div>
 
-                <div class="hero-illustration">
+                <div class="hero-illustration" aria-hidden="true">
                     <svg viewBox="0 0 432 198" fill="none" stroke="#8CAAC5" stroke-width="1.8" stroke-linejoin="round">
                         <path d="M59 152V39q0-7 7-7h220q7 0 7 7v113z"/>
                         <path d="M73 47h206v87H73zM59 152l-24 20q0 6 8 6h278l-28-26zM145 152v9h64v-9"/>
@@ -77,8 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <p class="hero-note">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
-                Recepción y retiro exclusivamente en el local.
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+                <?php $avisoLocal = 'Recepción y retiro exclusivamente en el local.'; ?>
+                <?= e($avisoLocal) ?>
             </p>
         </aside>
 
@@ -108,8 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="password">Contraseña</label>
                         <div class="password-wrap">
                             <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="••••••••">
-                            <button type="button" class="toggle-pass" aria-label="Mostrar u ocultar contraseña"
-                                    onclick="var p=document.getElementById('password'); p.type = p.type === 'password' ? 'text' : 'password';">
+                            <button type="button" class="toggle-pass" aria-label="Mostrar contraseña" aria-controls="password">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18"/></svg>
                             </button>
                         </div>
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="login-info" id="ayuda-acceso" role="note">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Tu cuenta muestra las herramientas de tu rol. Si eres cliente, el taller te proporcionará tus datos de acceso al recibir tu equipo. <span class="password-help">¿Olvidaste tu contraseña? Solicítala en el mostrador.</span></span>
+                    <span>Tu cuenta muestra las herramientas de tu rol. Si eres cliente, el taller te proporcionará tus datos de acceso al recibir tu equipo. <span class="password-help">¿Olvidaste tu contraseña? Solicítala en el mostrador.</span><span class="login-mobile-note"><?= e($avisoLocal) ?></span></span>
                 </div>
             </section>
 
@@ -135,5 +135,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </footer>
         </main>
     </div>
+    <script>
+        const passwordField = document.getElementById('password');
+        const togglePassword = document.querySelector('.toggle-pass');
+        togglePassword.addEventListener('click', () => {
+            const mostrar = passwordField.type === 'password';
+            passwordField.type = mostrar ? 'text' : 'password';
+            togglePassword.setAttribute('aria-label', mostrar ? 'Ocultar contraseña' : 'Mostrar contraseña');
+        });
+    </script>
 </body>
 </html>

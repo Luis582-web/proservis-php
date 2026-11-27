@@ -4,6 +4,7 @@
     --bg-main: #F8FAFC;
     --card-bg: #FFFFFF;
     --border: #CBD5E1;
+    --input-border: #7B8795;
     --text-main: #0F172A;
     --text-muted: #475569;
     --primary: #1E3A8A;
@@ -125,7 +126,7 @@ body {
     width: 100%;
     height: 3.05em;
     padding: 0 0.85em;
-    border: 1px solid #DBE4EF;
+    border: 1px solid var(--input-border);
     border-radius: 0.38em;
     background: #fff;
     color: #162B45;
@@ -170,6 +171,7 @@ body {
 .login-form-box .btn-login:hover { background: #173F6A; }
 .login-info { display: flex; align-items: flex-start; gap: 0.85em; margin-top: 2em; padding: 1.25em 1.4em; border-radius: 0.6em; background: #F8FAFC; color: #62758D; font-size: 0.75em; line-height: 1.45; }
 .login-info svg { margin-top: 0.1em; }
+.login-mobile-note { display: none; }
 .password-help { display: none; }
 .login-info:target .password-help { display: inline; }
 .login-form-box .alert-danger { font-size: 0.88em; }
@@ -188,6 +190,7 @@ body {
 @media (max-width: 900px) {
     .login-split { grid-template-columns: minmax(0, 1fr); }
     .login-hero { display: none; }
+    .login-mobile-note { display: block; margin-top: 0.5em; }
     .login-main { width: min(100%, 38rem); margin-inline: auto; padding: 1.5rem; }
     .login-form-box .form-group input { font-size: 1rem; }
 }
@@ -238,7 +241,7 @@ body {
 .form-group label { display: block; font-weight: 600; margin-bottom: 0.35rem; font-size: 0.9rem; }
 .form-group small { display: block; color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; }
 input, select, textarea {
-    width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #94A3B8; border-radius: 6px;
+    width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--input-border); border-radius: 6px;
     font-family: inherit; font-size: 0.95rem; color: var(--text-main); background: #FFFFFF;
 }
 
@@ -299,6 +302,7 @@ th { background: #F1F5F9; font-weight: 700; }
     .btn-menu-movil { display: inline-block; }
     .sidebar-nav, .user-box, .sidebar-footer { display: none; }
     .sidebar-nav.open { display: block; margin-top: 0.75rem; }
+    .sidebar-nav.open + .sidebar-footer { display: block; margin-top: 0.75rem; }
     .main-content { padding: 1rem; }
     .grid-4, .grid-2, .grid-main-aside, .filter-bar, .detail-grid, .stepper { grid-template-columns: 1fr; }
 }
