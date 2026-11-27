@@ -46,37 +46,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <aside class="login-hero" aria-hidden="true">
             <div class="hero-brand">
                 <span class="hero-brand-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                 </span>
                 ProServis
             </div>
 
-            <p class="hero-kicker">Gestión de servicio técnico</p>
-            <h2 class="hero-title">Cada equipo.<br>Cada reparación.<br>Todo bajo control.</h2>
-            <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
+            <div class="hero-content">
+                <p class="hero-kicker">Gestión de servicio técnico</p>
+                <h2 class="hero-title">Cada equipo.<br>Cada reparación.<br>Todo bajo control.</h2>
+                <p class="hero-text">Un solo espacio para recibir, coordinar y dar seguimiento a laptops y celulares.</p>
 
-            <div class="hero-illustration">
-                <svg width="280" height="130" viewBox="0 0 280 130" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round">
-                    <rect x="40" y="15" width="150" height="90" rx="4"/>
-                    <rect x="50" y="25" width="130" height="68" rx="1"/>
-                    <path d="M25 118 L40 105 H190 L205 118 Z"/>
-                    <rect x="100" y="105" width="30" height="5"/>
-                    <circle cx="115" cy="59" r="16" fill="#334E7A" stroke="none"/>
-                    <path d="M108 59 l5 5 l9 -9" stroke="#CBD5E1" stroke-width="2"/>
-                    <rect x="215" y="38" width="38" height="78" rx="5"/>
-                    <path d="M228 108 h12"/>
-                    <path d="M228 76 l4 4 l8 -8" stroke="#CBD5E1" stroke-width="2"/>
-                </svg>
+                <div class="hero-illustration">
+                    <svg width="280" height="130" viewBox="0 0 280 130" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round">
+                        <rect x="40" y="15" width="150" height="90" rx="4"/>
+                        <rect x="50" y="25" width="130" height="68" rx="1"/>
+                        <path d="M25 118 L40 105 H190 L205 118 Z"/>
+                        <rect x="100" y="105" width="30" height="5"/>
+                        <circle cx="115" cy="59" r="16" fill="#334E7A" stroke="none"/>
+                        <path d="M108 59 l5 5 l9 -9" stroke="#CBD5E1" stroke-width="2"/>
+                        <rect x="215" y="38" width="38" height="78" rx="5"/>
+                        <path d="M228 108 h12"/>
+                        <path d="M228 76 l4 4 l8 -8" stroke="#CBD5E1" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <ol class="hero-steps">
+                    <li><span>01</span>Recepción</li>
+                    <li><span>02</span>Reparación</li>
+                    <li><span>03</span>Retiro</li>
+                </ol>
             </div>
 
-            <ol class="hero-steps">
-                <li><span>01</span>Recepción</li>
-                <li><span>02</span>Reparación</li>
-                <li><span>03</span>Retiro</li>
-            </ol>
-
             <p class="hero-note">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
                 Recepción y retiro exclusivamente en el local.
             </p>
         </aside>
